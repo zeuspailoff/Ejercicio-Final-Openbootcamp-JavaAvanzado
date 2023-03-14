@@ -1,4 +1,4 @@
-package Sesion24.Codigo.Final;
+package Codigo;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,7 +6,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class UsuariosDBFichero extends UsuariosDB {
+public class UsuariosDBFichero implements UsuariosDB {
     public String ficheroDatos = "usuarios.txt";
 
     @Override
@@ -61,7 +61,7 @@ public class UsuariosDBFichero extends UsuariosDB {
         } catch (Exception e) {
         }
 
-        incrementarInserciones();
+
     }
 
     @Override
@@ -86,7 +86,7 @@ public class UsuariosDBFichero extends UsuariosDB {
         } catch (Exception e) {
         }
 
-        incrementarEliminaciones();
+
     }
 
     private String separarUsuarioPorComas(Usuario usuario) {

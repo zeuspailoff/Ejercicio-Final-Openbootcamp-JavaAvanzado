@@ -1,4 +1,4 @@
-package Sesion24.Codigo.Final;
+package Codigo;
 
 public class Usuario {
     public String nombreUsuario;

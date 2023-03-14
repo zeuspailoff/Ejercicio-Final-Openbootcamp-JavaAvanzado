@@ -1,5 +1,5 @@
-package Sesion24.Codigo.Final;
 
+package Codigo;
 public class Main {
     public static void main(String []args) {
         Usuario usuario = new Usuario();
@@ -50,7 +50,14 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("Total de inserciones: " + usuariosDB.getTotalInserciones());
-        System.out.println("Total de eliminaciones: " + usuariosDB.getTotalEliminaciones());
+        imprimirEstadisticas(usuariosDB);
+
+
+    }
+    public static void imprimirEstadisticas(UsuariosDB usuariosDB){
+        if(usuariosDB instanceof UsuariosDBMemoria){
+            System.out.println("inserciones: " + ((UsuariosDBMemoria) usuariosDB).getTotalInserciones());
+            System.out.println("Eliminaciones: " + ((UsuariosDBMemoria) usuariosDB).getTotalEliminaciones());
+        }
     }
 }

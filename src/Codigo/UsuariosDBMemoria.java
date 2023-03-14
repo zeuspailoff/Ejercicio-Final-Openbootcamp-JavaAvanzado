@@ -1,8 +1,11 @@
-package Sesion24.Codigo.Final;
+package Codigo;
 
 import java.util.ArrayList;
 
-public class UsuariosDBMemoria extends UsuariosDB {
+public class UsuariosDBMemoria implements UsuariosDB, UsuariosDBEstadisticas {
+
+    private int totalInserciones = 0;
+    private int totalEliminaciones = 0;
     ArrayList<Usuario> usuarios = new ArrayList();
 
     @Override
@@ -30,7 +33,7 @@ public class UsuariosDBMemoria extends UsuariosDB {
         }
 
         usuarios.add(usuario);
-        incrementarInserciones();
+        totalInserciones++;
     }
 
     @Override
@@ -38,9 +41,20 @@ public class UsuariosDBMemoria extends UsuariosDB {
         for (int i = 0; i < usuarios.size(); i++) {
             if (usuarios.get(i).nombreUsuario.equalsIgnoreCase(usuario.nombreUsuario)) {
                 usuarios.remove(i);
+                totalEliminaciones++;
             }
         }
 
-        incrementarEliminaciones();
+
+    }
+
+    @Override
+    public int getTotalInserciones() {
+        return totalInserciones;
+    }
+
+    @Override
+    public int getTotalEliminaciones() {
+        return totalEliminaciones;
     }
 }

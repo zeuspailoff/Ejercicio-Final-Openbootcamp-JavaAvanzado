@@ -1,4 +1,4 @@
-package Sesion24.Codigo.Final;
+package Codigo;
 
 public class UsuariosNiveles extends Usuarios {
     private UsuariosNiveles() {}
