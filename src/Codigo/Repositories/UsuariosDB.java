@@ -1,8 +1,10 @@
-package Codigo;
+package Codigo.Repositories;
+
+import Codigo.entities.Usuario;
 
 import java.util.ArrayList;
 
- interface UsuariosDB {
+ public interface UsuariosDB {
 
 
      ArrayList<Usuario> obtener();

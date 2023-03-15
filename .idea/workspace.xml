@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ced611e1-1669-47ab-a389-9d1095bd0daf" name="Changes" comment="Ejercicio-Final-Openbootcamp-JavaAvanzado">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Codigo/UsuariosDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Codigo/UsuariosDBEstadisticas.java" afterDir="false" />
+    <list default="true" id="ced611e1-1669-47ab-a389-9d1095bd0daf" name="Changes" comment="refactorizamos un poco y añadimos interfaces">
+      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseMySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseSQlite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Usuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/UsuariosDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/UsuariosDBFichero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/UsuariosDBFichero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/UsuariosDBMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/UsuariosDBMemoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/UsuariosNiveles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/UsuariosNiveles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/services/UsuariosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBEstadisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBEstadisticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBFichero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBFichero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBMemoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosNiveles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/services/UsuariosServiceNiveles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +27,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/proyectos open bootcamp/java/Demo-Solid-Final"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/proyectos open bootcamp/java/Demo-Solid-Final&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Codigo.Main">
-    <configuration name="Codigo.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Codigo.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Demo-Solid-Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Codigo.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Demo-Solid-Final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="Codigo.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +106,20 @@
       <option name="project" value="LOCAL" />
       <updated>1678818363981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactorizamos un poco y añadimos interfaces">
+      <created>1678819963382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678819963382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ejercicio-Final-Openbootcamp-JavaAvanzado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio-Final-Openbootcamp-JavaAvanzado" />
+    <MESSAGE value="refactorizamos un poco y añadimos interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactorizamos un poco y añadimos interfaces" />
   </component>
 </project>

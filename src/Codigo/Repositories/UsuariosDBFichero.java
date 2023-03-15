@@ -1,4 +1,6 @@
-package Codigo;
+package Codigo.Repositories;
+
+import Codigo.entities.Usuario;
 
 import java.io.File;
 import java.io.FileOutputStream;

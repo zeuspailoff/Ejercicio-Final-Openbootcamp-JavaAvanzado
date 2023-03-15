@@ -1,5 +1,9 @@
+import Codigo.Database.DatabaseSQlite;
+import Codigo.Database.DatabaseStore;
+import Codigo.Repositories.*;
+import Codigo.entities.Usuario;
+import Codigo.services.UsuariosService;
 
-package Codigo;
 public class Main {
     public static void main(String []args) {
         Usuario usuario = new Usuario();
@@ -32,18 +36,21 @@ public class Main {
             usuariosDB = new UsuariosDBMemoria();
         }
 
-        Usuarios usuarios = new Usuarios(usuariosDB);
+        UsuariosService usuariosService = new UsuariosService(usuariosDB);
 
-        usuarios.crearUsuario(usuario);
-        usuarios.crearUsuario(usuario2);
-        usuarios.crearUsuario(usuario3);
+        usuariosService.crearUsuario(usuario);
+        usuariosService.crearUsuario(usuario2);
+        usuariosService.crearUsuario(usuario3);
 
-        Usuario openbootcamp = usuarios.obtenerUsuario("openbootcamp");
+        DatabaseStore db = new DatabaseSQlite();
+        GuardarEnBaseDeDatos(db , usuario);
+
+        Usuario openbootcamp = usuariosService.obtenerUsuario("openbootcamp");
         System.out.println("Email del usuario obtenido: " + openbootcamp.email);
 
-        usuarios.borrarUsuario("openbootcamp");
+        usuariosService.borrarUsuario("openbootcamp");
         //usuarios.borrarUsuario("openbootcamp3");
-        for (Usuario a : usuarios.listarUsuarios()) {
+        for (Usuario a : usuariosService.listarUsuarios()) {
             System.out.println("Usuario actual: " + a.nombreUsuario);
             System.out.println("----------------" + "-".repeat(a.nombreUsuario.length()));
             System.out.println(a);
@@ -53,11 +60,15 @@ public class Main {
         imprimirEstadisticas(usuariosDB);
 
 
+
     }
     public static void imprimirEstadisticas(UsuariosDB usuariosDB){
         if(usuariosDB instanceof UsuariosDBMemoria){
             System.out.println("inserciones: " + ((UsuariosDBMemoria) usuariosDB).getTotalInserciones());
             System.out.println("Eliminaciones: " + ((UsuariosDBMemoria) usuariosDB).getTotalEliminaciones());
         }
+    }
+    public static void GuardarEnBaseDeDatos(DatabaseStore db, Usuario usuario){
+        db.Guardar(usuario);
     }
 }

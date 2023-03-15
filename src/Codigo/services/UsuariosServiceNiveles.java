@@ -1,7 +1,9 @@
-package Codigo;
+package Codigo.services;
 
-public class UsuariosNiveles extends Usuarios {
-    private UsuariosNiveles() {}
+import Codigo.entities.Usuario;
+
+public class UsuariosServiceNiveles extends UsuariosService {
+    private UsuariosServiceNiveles() {}
 
     public boolean esAdministrador(Usuario usuario) {
         return comprobarNivel(usuario, 10);

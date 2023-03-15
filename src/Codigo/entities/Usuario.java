@@ -1,4 +1,4 @@
-package Codigo;
+package Codigo.entities;
 
 public class Usuario {
     public String nombreUsuario;

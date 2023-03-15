@@ -1,16 +1,19 @@
-package Codigo;
+package Codigo.services;
 
+
+import Codigo.Repositories.UsuariosDB;
+import Codigo.entities.Usuario;
 
 import java.util.ArrayList;
 
-public class Usuarios {
+public class UsuariosService {
     UsuariosDB usuariosDB;
 
-    public Usuarios(UsuariosDB usuariosDB) {
+    public UsuariosService(UsuariosDB usuariosDB) {
         this.usuariosDB = usuariosDB;
     }
 
-    protected Usuarios() {}
+    protected UsuariosService() {}
 
     public ArrayList<Usuario> listarUsuarios() {
         return usuariosDB.obtener();
@@ -29,6 +32,7 @@ public class Usuarios {
         }
 
         usuariosDB.insertar(usuario);
+
     }
 
     public void borrarUsuario(String username) {
