@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ced611e1-1669-47ab-a389-9d1095bd0daf" name="Changes" comment="refactorizamos un poco y añadimos interfaces">
-      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseMySQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseSQlite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Codigo/Database/DatabaseStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/services/UsuariosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBEstadisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBEstadisticas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBFichero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBFichero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosDBMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/Repositories/UsuariosDBMemoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codigo/UsuariosNiveles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Codigo/services/UsuariosServiceNiveles.java" afterDir="false" />
+    <list default="true" id="ced611e1-1669-47ab-a389-9d1095bd0daf" name="Changes" comment="Organizamos todo y añadimos ejemplo de base de datos">
+      <change afterPath="$PROJECT_DIR$/src/Codigo/config/JerseyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Codigo/controllers/UsuariosControllers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +24,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6c8885ca-65f6-40d7-9834-c2681de1fb1f" />
+        <option name="url" value="https://github.com/zeuspailoff/Ejercicio-Final-Openbootcamp-JavaAvanzado" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,13 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678819963382</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Organizamos todo y añadimos ejemplo de base de datos">
+      <created>1678881892054</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678881892054</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ejercicio-Final-Openbootcamp-JavaAvanzado" />
     <MESSAGE value="refactorizamos un poco y añadimos interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorizamos un poco y añadimos interfaces" />
+    <MESSAGE value="Organizamos todo y añadimos ejemplo de base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organizamos todo y añadimos ejemplo de base de datos" />
   </component>
 </project>
